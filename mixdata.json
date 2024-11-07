@@ -1,0 +1,19 @@
+[{
+    "id":1,
+    "name":"zyan",
+    "Phone":["0324243","032734"],
+    "address":"xyz"
+},
+{
+    "id":2,
+    "name":"Ayan",
+    "Phone":["0324243","032734"],
+    "address":"xyz"
+},
+{
+    "id":3,
+    "name":"Arham",
+    "Phone":["0324243","032734"],
+    "address":[{"karachi":"xyz"},{"sialkot":"Bajwat"}]
+}
+]
