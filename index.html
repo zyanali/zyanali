@@ -8,7 +8,9 @@
 
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+
+    </div>
     <h1>hello</h1>
     <script src="jquery/jquery-3.7.1.js"></script>
     <script src="bootstrap-4.6.2-dist/js/bootstrap.min.js"></script>
@@ -17,7 +19,25 @@ $.ajax({
     url:"mixdata.json",
     dataType:"json",
     success: function (response){
-        console.log(response);
+        // console.log(response);
+        for(const key in response){
+            // console.log(response[Key]);
+            // console.log(typeof (response[Key]));
+            if(Array.isArray(response[key])){
+                response[key].forEach(element => {
+                    console.log(element + "contact")
+                });
+            }
+            else if(typeof (response[key]) === 'object'){
+                for(const element in response[key] ){
+                    console.log(response[key][element]);
+                }
+               
+            }
+            else{
+                console.log(response[key]);
+            }
+        }
     }
 })
     </script>
